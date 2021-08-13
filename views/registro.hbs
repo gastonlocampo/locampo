@@ -1,0 +1,39 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh">
+    <div class="row justify-content-center align-items-center" style="height: 100vh">
+        <div class="col-5 text-light">
+            <form method="post" action="/registro" enctype="multipart/form-data">
+                <div>
+                    <h1 class="text-center mb-5">REGISTRATE</h1>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="apellido">Apellido<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="apellido" id="apellido">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="username">Nombre de usuario<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="username" id="username">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="pass">Contraseña<span class="text-danger">*</span></label>
+                    <input type="password" class="form-control" name="pass" id="pass">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="mail">Mail<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="mail" id="mail">
+                </div>
+                <div class="form-group mt-1">
+                    <label for="telefono">Teléfono<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="telefono" id="telefono">
+                </div>
+                <div class="d-grid gap-2">
+                <p class="text-danger text-center mt-4">{{message}}</p>
+                <button type="submit" class="btn btn-secondary mt-0">Registrate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

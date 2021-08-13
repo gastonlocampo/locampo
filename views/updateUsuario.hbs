@@ -1,0 +1,34 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh;">
+    <a href="/usuarios" class="btn btn-secondary mt-4 mb-2 ms-5"> Volver al perfil</a>
+    <div class="row justify-content-center align-items-center" style="height: 80vh">
+        <div class="col-5 text-light">
+            <h1 class="text-center mb-5">EDITAR MI PERFIL</h1>
+            <form method="POST" action="/usuarios/update/{{usuario.id}}">
+                <div class="form-group">
+                    <label for="nombre">Nombre:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{usuario.nombre}}">
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="apellido" id="apellido" value="{{usuario.apellido}}">
+                </div>
+                <div class="form-group">
+                    <label for="username">Nombre de usuario:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="username" id="username" value="{{usuario.username}}">
+                </div>
+                <div class="form-group">
+                    <label for="mail">Mail:<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="mail" id="mail" value="{{usuario.mail}}">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="telefono" id="telefono" value="{{usuario.telefono}}">
+                </div>
+                <div class="d-grid gap-2">
+                    <p class="text-danger text-center mt-4">{{message}}</p>
+                    <button type="submit" class="btn btn-secondary mt-0"><i class="far fa-edit"></i> EDITAR MI USUARIO</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

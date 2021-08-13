@@ -1,0 +1,19 @@
+<div class="container-fluid bg-dark" style="height: 100vh;">
+    <div class="container">
+        <a href="/admin" class="btn btn-secondary mt-4 mb-4"> Volver a funciones de ADMIN</a>
+        <h1 class="text-center text-light border border-light pt-1 pb-1 mt-4 mb-5">TODOS LOS USUARIOS</h1>
+        <div class="row d-flex justify-content-center">
+            {{#each usuarios}}
+            <div class="card mx-auto mt-5 bg-light" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{nombre}} {{apellido}}</h5>
+                    <p class="card-text">Nombre de usuario: {{username}}</p>
+                    <p class="card-text">Mail: {{mail}}</p>
+                    <p class="card-text">Teléfono: {{telefono}}</p>
+                    <p class="card-text">Fecha de creación: {{ts_create}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

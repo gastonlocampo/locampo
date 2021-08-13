@@ -1,0 +1,26 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh;">
+    <a href="/admin/categorias" class="btn btn-secondary mt-4 mb-2 ms-5"> Volver a las categorías </a>
+    <div class="row justify-content-center align-items-center" style="height: 80vh">
+        <div class="col-7 text-light">
+            <h1 class="text-center mb-5">DATOS DE LA CATEGORÍA</h1>
+            <form method="POST" action="/admin/categorias/update/{{categoria.id}}" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre">Nombre de la categoría:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{categoria.nombre}}">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion" value="{{categoria.descripcion}}">
+                </div>
+                <div class="form-group mt-4">
+                    <label for="imagen">Editar imagen:<span class="text-danger">*</span></label>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+                <div class="d-grid gap-2">
+                    <p class="text-danger text-center mt-4">{{message}}</p>
+                    <button type="submit" class="btn btn-secondary mt-0"><i class="far fa-edit"></i> EDITAR CATEGORÍA</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

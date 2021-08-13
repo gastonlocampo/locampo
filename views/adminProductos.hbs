@@ -1,0 +1,31 @@
+<div class="container-fluid bg-dark">
+    <div class="container">
+        <a href="/admin" class="btn btn-secondary mt-4 mb-4"> Volver a funciones de ADMIN</a>
+        <a href="/admin/productos/create" class="btn btn-secondary mt-4 mb-4 ms-4"><i class="fas fa-plus-circle"></i> AGREGAR PRODUCTOS</a>
+        <div class="row d-flex justify-content-center">
+            <h1 class="text-center text-light col-5 border border-light pt-1 pb-1 mt-4 mb-4">TODOS LOS PRODUCTOS</h1>
+            <table class="table text-light">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                    <th>Imagen</th> 
+                    <th></th>
+                    <th></th>
+                </tr>
+                {{#each productos}}
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>{{descripcion}}</td>
+                    <td>${{precio}}</td>
+                    <td>{{nombreCategoria}}</td>
+                    <td><img src="/images/{{uuid}}" alt="No hay imagen." style="height : 50px"></td>
+                    <td><a href="/admin/productos/update/{{id}}" class="btn btn-primary"><i class="far fa-edit"></i> EDITAR</a></td>
+                    <td><a href="/admin/productos/delete/{{id}}" class="btn btn-danger"><i class="far fa-trash-alt"></i> ELIMINAR</a></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>

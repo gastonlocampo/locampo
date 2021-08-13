@@ -1,0 +1,43 @@
+/*
+body {
+  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: blue;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: white;
+}
+a:hover {
+  color: white;
+}
+a:active {
+  color: white;
+}
+*/
+
+.bg-navbarbl {
+  background-color:  #F34D4D;
+  opacity: 0.9;
+}
+
+.bg-footerbl {
+  background-color:  #F34D4D;
+  opacity: 1;
+}
+
+.btn-footer {
+  color: black;
+}
+.bg-bl2 {
+  background-color: #4CB2B2;
+}
+
+.text-bl2 {
+  color: #4CB2B2;
+}

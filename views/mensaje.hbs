@@ -1,0 +1,16 @@
+<div class="container" style="height: 100vh;">
+    <a href="/admin/contacto" class="btn btn-secondary mt-4 mb-2 ms-5"> Volver a los mensajes</a>
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card mx-auto mt-5" style="width: 18rem;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{mensaje.nombre}} {{mensaje.apellido}}</h5>
+                    <p class="card-text">Asunto: {{mensaje.asunto}}</p>
+                    <p class="card-text">Contenido: {{mensaje.contenido}}</p>
+                    <p class="card-text">Mail: {{mensaje.mail}}</p>
+                    <p class="card-text">Fecha de creación: {{mensaje.ts_create}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

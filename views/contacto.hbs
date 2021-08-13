@@ -1,0 +1,77 @@
+<div class="container-fluid mb-4 bg-white" style="height: 100vh;">
+    <div class="row d-flex justify-content-center">
+        <h2 class="text-center text-dark col-5 border border-dark pt-1 pb-1 mt-5 mb-4">OPCIONES DE CONTACTO</h2>
+        <p class="text-center w-responsive mx-auto">¿Tiene alguna pregunta? Por favor, no dude en contactarse directamente con nosotros. Nos pondremos en contacto con usted a la brevedad.</p>
+        <div class="container row">
+            <div class="col-md-9 mb-md-0 mb-5 mt-5 ms-5 me-5">
+                <form id="contact-form" name="contact-form" action="/contacto" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="nombre" class="mb-1">Nombre</label>                            
+                                <input type="text" id="nombre" name="nombre" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <label for="apellido" class="mb-1">Apellido</label>
+                                <input type="text" id="apellido" name="apellido" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <label for="mail" class="mb-1 mt-3">Mail</label>                            
+                                <input type="text" id="mail" name="mail" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <label for="asunto" class="mb-1 mt-3">Asunto</label>                            
+                                <input type="text" id="asunto" name="asunto" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form">
+                                <label for="contenido" class="mb-1 mt-3">Mensaje</label>                            
+                                <textarea type="text" id="contenido" name="contenido" rows="2" class="form-control md-textarea"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center text-md-left">
+                    <p class="text-danger text-center mt-1">{{message}}</p>
+                    <a class="btn btn-primary d-grid gap-2 mt-5" onclick="document.getElementById('contact-form').submit();">Enviar mensaje</a>
+                </div>
+                <div class="status"></div>
+            </div>
+            <div class="col-md-2 text-center mt-5">
+                <ul class="list-unstyled mb-0">
+                    <li>
+                        <a href="https://goo.gl/maps/HkhJo7kt2UKVvdD86" target="_blank" class="text-dark">
+                            <i class="fas fa-map-marker-alt fa-2x"></i>
+                            <p>Buchardo 1895, Barrio General Paz, Córdoba</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tel:3515919151" class="text-dark">
+                            <i class="fas fa-phone mt-4 fa-2x"></i>
+                            <p>3515919151</p>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="mailto:buenlunes.g@gmail.com" target="_blank" class="text-dark">
+                            <i class="fas fa-envelope mt-4 fa-2x"></i>
+                            <p>buenlunes.g@gmail.com</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+</div>

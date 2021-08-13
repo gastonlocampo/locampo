@@ -1,0 +1,41 @@
+<div class="container-fluid bg-dark m-0" style="height: 100vh;">
+    <a href="/admin/productos" class="btn btn-secondary mt-4 mb-2 ms-5"> Volver a los productos</a>
+    <div class="row justify-content-center align-items-center" style="height: 80vh">
+        <div class="col-7 text-light">
+            <h1 class="text-center mb-5">DATOS DEL PRODUCTO</h1>
+            <form method="POST" action="/admin/productos/update/{{producto.id}}" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nombre">Nombre del producto:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" value="{{producto.nombre}}">
+                </div>
+                <div class="form-group">
+                    <label for="descripcion">Descripción:<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion" value="{{producto.descripcion}}">
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio:<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="precio" id="precio" value="{{producto.precio}}">
+                </div>
+                <div class="form-group">
+                    <label for="stock">Stock:<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" name="stock" id="stock" value="{{producto.stock}}">
+                </div>
+                <label for="id_categoria">Categoría:<span class="text-danger">*</span></label>
+                <select name="id_categoria" id="id_categoria" class="form-select bg-danger text-dark">
+                    <option class="bg-light text-dark" disabled selected>SELECCIONE LA CATEGORÍA NUEVAMENTE</option>
+                    {{#each categorias}}
+                        <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
+                </select>
+                <div class="form-group mt-4">
+                    <label for="imagen">Editar imagen:<span class="text-danger">*</span></label>
+                    <input type="file" name="imagen" id="imagen">
+                </div>
+                <div class="d-grid gap-2">
+                    <p class="text-danger text-center mt-4">{{message}}</p>
+                    <button type="submit" class="btn btn-secondary mt-0"><i class="far fa-edit"></i> EDITAR PRODUCTO</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

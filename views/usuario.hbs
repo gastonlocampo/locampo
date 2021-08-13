@@ -1,0 +1,18 @@
+<div class="container mt-5 pt-5" style="height: 100vh;">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="text-center">MIS DATOS DE USUARIO</h1>
+            <div class="card mx-auto mt-5" style="width: 50rem;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{usuario.nombre}} {{usuario.apellido}}</h5>
+                    <p class="card-text">Nombre de usuario: {{usuario.username}}</p>
+                    <p class="card-text">Mail: {{usuario.mail}}</p>
+                    <p class="card-text">Teléfono: {{usuario.telefono}}</p>
+                    <p class="card-text">Fecha de creación: {{usuario.ts_create}}</p>
+                    <a href="/usuarios/update/{{usuario.id}}" class="btn btn-primary"><i class="far fa-edit"></i> EDITAR</a>
+                    <a href="/usuarios/delete/{{usuario.id}}" class="btn btn-danger"><i class="far fa-trash-alt"></i> ELIMINAR</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container" style="height: 100vh;">
+    <a href="/productos" class="btn btn-secondary mt-4 mb-2 ms-5"> Volver a los productos</a>
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card mx-auto mt-5" style="width: 18rem;">
+                <img src="/images/{{producto.uuid}}" class="card-img-top" alt="No hay imagen.">
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{producto.nombre}}</h5>
+                    <p class="card-text">Descripción: {{producto.descripcion}}</p>
+                    <p class="card-text">Precio: ${{producto.precio}}</p>
+                    <p class="card-text">Stock: {{producto.stock}}</p>
+                    <p class="card-text">Categoría: {{producto.nombreCategoria}}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

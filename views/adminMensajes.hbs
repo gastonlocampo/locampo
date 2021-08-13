@@ -1,0 +1,32 @@
+<div class="container-fluid bg-dark" style="height: 100vh;">
+    <div class="container">
+        <a href="/admin" class="btn btn-secondary mt-4 mb-4 ms-5"> Volver a funciones de ADMIN</a>
+        <div class="row d-flex justify-content-center">
+            <h1 class="text-center text-light col-5 border border-light pt-2 pb-2 mt-2 mb-5">MENSAJES RECIBIDOS</h1>
+            <table class="table text-light">
+                <tr>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Apellido</th>
+                    <th class="text-center">Mail</th>
+                    <th class="text-center">Asunto</th>
+                    <th class="text-center">Contenido</th>
+                    <th class="text-center">Fecha de creación</th>
+                    <th class="text-center"></th>
+                    <th class="text-center"></th>
+                </tr>
+                {{#each mensajes}}
+                <tr>
+                    <td class="text-center">{{nombre}}</td>
+                    <td class="text-center">{{apellido}}</td>
+                    <td class="text-center">{{mail}}</td>
+                    <td class="text-center">{{asunto}}</td>
+                    <td class="text-center">{{contenido}}</td>
+                    <td class="text-center">{{ts_create}}</td>
+                    <td class="text-center"><a href="/admin/contacto/mensaje/{{id}}" class="btn btn-secondary">VER MENSAJE</a></td>
+                    <td><a href="/admin/contacto/delete/{{id}}" class="btn btn-danger"><i class="far fa-trash-alt"></i> ELIMINAR</a></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>

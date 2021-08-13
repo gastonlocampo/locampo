@@ -1,0 +1,27 @@
+<div class="bg-dark container-fluid pt-2 pb-4">
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <h1 class="text-center text-light col-5 border border-light pt-1 pb-1 mt-4 mb-4">NUESTRA CARTA</h1>
+            <table class="table text-light mt-4">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Categoría</th>
+                    <th></th>
+                </tr>
+                {{#each productos}}
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>{{descripcion}}</td>
+                    <td>${{precio}}</td>
+                    <td>{{stock}}</td>
+                    <td>{{nombreCategoria}}</td>
+                    <td><a href="/productos/single/{{id}}" class="btn btn-danger">VER MÁS</a></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
